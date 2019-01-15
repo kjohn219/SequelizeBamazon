@@ -1,6 +1,6 @@
 // Defining Tables in DB in Model
 module.exports = function(connection, Sequelize) {
-    const Product = connection.define('Product', {
+    const Product = connection.define('products', {
       product_name: {
         type: Sequelize.STRING,
         allowNull: false
