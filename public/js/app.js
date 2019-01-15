@@ -96,7 +96,7 @@ $(document).ready(() => {
   </table>
   <div class="totalCart"></div>`);
     
-  // Calculating Total Cost of Cart
+  // Calculating total
   let totalcost = 0;
     for (let i = 0; i < cart.length; i++) {
       totalcost += (parseFloat(cart[i].price)*parseFloat(cart[i].incart.padStart(3,0)))
