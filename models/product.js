@@ -21,3 +21,4 @@ module.exports = function(connection, Sequelize) {
   
     return Product;
   }
+  //done
