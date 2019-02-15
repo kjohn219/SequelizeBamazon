@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/5.2.0/mocha.min.css" />
+  <style>
+    #app {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <table class="table">
+        <thead class="thead-dark text-align-center">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Department</th>
+            <th scope="col">Price</th>
+            <th scope="col">In Stock</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Cart</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="table-body bg-light tbodypage"><tr>
+        <td class="id">1</td>
+        <td class="product_name">Paper Towels</td>
+        <td class="department_name">Paper Products</td>
+        <td class="price">16.00</td>
+        <td class="stock_quantity">47</td>
+        <td class="quantity"><input class="buy1" id="input"></td>
+        <td><button type="button" class="btn btn-info">Add to Cart</button></td><td>
+      </td></tr><tr>
+        <td class="id">2</td>
+        <td class="product_name">Dunkin Donuts Coffee</td>
+        <td class="department_name">Coffee</td>
+        <td class="price">25.00</td>
+        <td class="stock_quantity">32</td>
+        <td class="quantity"><input class="buy1" id="input"></td>
+        <td><button type="button" class="btn btn-info">Add to Cart</button></td><td>
+      </td></tr></tbody>
+      </table>
+  </div>
+
+  <div id="mocha"></div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/5.2.0/mocha.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.1.2/chai.min.js"></script>
+  <script>
+    mocha.ui('bdd');
+    mocha.reporter('html');
+    const expect = chai.expect;
+  </script>
+  <script src="test.js"></script>
+  <script>
+    mocha.run();
+  </script>
+</body>
+
+</html>

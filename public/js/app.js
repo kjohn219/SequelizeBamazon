@@ -15,21 +15,26 @@ const list = function(items) {
   });
 };
 
-const clearEntry = function() {
-  $("[id =input]").val("");
-};
+// const clearEntry = function() {
+//   $("[id =input]").val("");
+// };
+
+const clearEntry = function(element){
+  $(element).val("");
+}
+
 // Validate cart and product stocks
 const validate = function(item) {
   if (item.incart.padStart(4,0) > item.instock.padStart(4,0)) {
     $(".alert").removeClass("hide");
-    clearEntry();
+    clearEntry("[id = input]");
   } else if (isNaN(item.incart)){
     $(".alert").removeClass("hide");
-    clearEntry();
+    clearEntry("[id = input]");
   }
   else {
     cart.push(item);
-    clearEntry();
+    clearEntry("[id = input]");
   }
 };
 
